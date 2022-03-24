@@ -6,6 +6,7 @@ from django.urls import path, include
 import news.views
 
 urlpatterns = [
+    path('', news.views.index),
     path('admin/', admin.site.urls),
     path('news/', include('news.urls')),
 ]
