@@ -5,13 +5,7 @@
 {% endblock %}
 
 {% block sidebar %}
-    <div class="col-md-3">
-        <div class="list-group">
-            {% for item in categories %}
-                <a href="{% url 'category' item.pk %}" class="list-group-item list-group-item-action">{{ item.title }}</a>
-            {% endfor %}
-        </div>
-    </div>
+    {% include 'inc/_sidebar.html' %}
 {% endblock %}
 
 {% block content %}
